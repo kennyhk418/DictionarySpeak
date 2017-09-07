@@ -3,7 +3,7 @@
     "version" : "1.0",
     "name": "Dictionary and Speak",
     "description": "A simple app that lets users to use context menu to
-                    look up words on Dictionary.com and speak the words out",
+                    look up words on Dictionary.com and speak the selected words out",
     "icons" : {
         "128": "128icon.png",
         "48" : "48icon.png",
@@ -18,7 +18,7 @@
         "persistent" : false
     },
     "permissions": [
-        "contextMenus", "tabs"
+        "contextMenus", "tabs", "tts"
     ]
 
 }

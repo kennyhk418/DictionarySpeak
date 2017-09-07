@@ -19,6 +19,10 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
         //     "type" : "normal"
         // }
         // chrome.windows.create(dataObj, function(){});
+
+        // Speak the selected text
+        chrome.tts.speak(clickData.selectionText, {'rate': 0.5});
+        // Open a new tab
         chrome.tabs.create({url: dictUrl});
     }
 
