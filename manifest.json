@@ -9,8 +9,16 @@
         "48" : "48icon.png",
         "16" : "16icon.png"
     },
-    "browser_action":{
-        "default_icon" : "16icon.png",
-        "default_popup" : "index.html"
-    }
+    // "browser_action":{
+    //     "default_icon" : "16icon.png",
+    //     "default_popup" : "index.html"
+    // },
+    "background":{
+        "scripts": ["lookup.js"],
+        "persistent" : false
+    },
+    "permissions": [
+        "contextMenus", "tabs"
+    ]
+
 }
