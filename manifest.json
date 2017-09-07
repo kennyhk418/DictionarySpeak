@@ -1,1 +1,16 @@
-Testing git
+{
+    "manifest_version": 2,
+    "version" : "1.0",
+    "name": "Dictionary and Speak",
+    "description": "A simple app that lets users to use context menu to
+                    look up words on Dictionary.com and speak the words out",
+    "icons" : {
+        "128": "128icon.png",
+        "48" : "48icon.png",
+        "16" : "16icon.png"
+    },
+    "browser_action":{
+        "default_icon" : "16icon.png",
+        "default_popup" : "index.html"
+    }
+}
