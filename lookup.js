@@ -1,6 +1,6 @@
 var menu = {
     "id" : "lookup",
-    "title" : "Look up this word",
+    "title" : "What is this ?",
     "contexts" : ["selection"]
 }
 
@@ -11,19 +11,32 @@ function fixedEncodeURI (str) {
 }
 
 chrome.contextMenus.onClicked.addListener(function(clickData){
-    if(clickData.menuItemId == "lookup" && clickData.selectionText){
-        var dictUrl = "http://www.dictionary.com/browse/"
-        + fixedEncodeURI(clickData.selectionText);
-        // var dataObj = {
-        //     "url" : dictUrl,
-        //     "type" : "normal"
-        // }
-        // chrome.windows.create(dataObj, function(){});
+    var lookupword = true;
+    var speakword = true;
+    chrome.storage.sync.get(['lookupword','speakword'], function(data){
+        if(data.lookupword || data.speakword){
+            lookupword = data.lookupword;
+            speakword = data.speakword;
+        }
 
-        // Speak the selected text
-        chrome.tts.speak(clickData.selectionText, {'rate': 0.5});
-        // Open a new tab
-        chrome.tabs.create({url: dictUrl});
-    }
+        if(clickData.menuItemId == "lookup" && clickData.selectionText){
+            var dictUrl = "http://www.dictionary.com/browse/"
+            + fixedEncodeURI(clickData.selectionText);
+            // var dataObj = {
+            //     "url" : dictUrl,
+            //     "type" : "normal"
+            // }
+            // chrome.windows.create(dataObj, function(){});
+
+            // Speak the selected text
+            if(speakword === true){
+                chrome.tts.speak(clickData.selectionText, {'rate': 0.5});
+            }
+            // Open a new tab
+            if(lookupword === true){
+                chrome.tabs.create({url: dictUrl});
+            }
+        }
+    });
 
 })
