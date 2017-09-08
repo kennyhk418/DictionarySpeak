@@ -1,5 +1,5 @@
 var xml = "http://www.dictionaryapi.com/api/v1/references/sd4/xml/"
-            +"trash"
+            +"invincible"
             +"?key=ff737949-9dc1-4d03-81f5-2dcdbe597bdc";
 $(function(){
     $.ajax({
@@ -20,7 +20,16 @@ $(function(){
             // Meaning of the word
             var def = data.getElementsByTagName('dt');
             for(var i = 0; i < def.length; i++){
-                console.log(def[i].childNodes[0].nodeValue)
+                var result = def[i].childNodes[0].nodeValue;
+
+                // Remove the empty result
+                if(result != ':'){
+                    // Remove the first : in the result
+                    result = result.slice(1);
+                    // Make the first character upper case
+                    result = result.charAt(0).toUpperCase()+ result.slice(1);
+                    document.write(result + "<br>");
+                }
             }
         },
         error: function(xhr, status){
