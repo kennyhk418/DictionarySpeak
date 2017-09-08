@@ -47,7 +47,7 @@ $(function(){
 
         var notiOptions = {
             type: 'basic',
-            iconUrl: "48icon.png",
+            iconUrl: "../icons/48icon.png",
             title: "Custom Options",
             message: msg
         }

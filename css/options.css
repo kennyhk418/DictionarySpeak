@@ -2,7 +2,10 @@
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    width:200px;
+    width:250px;
+    background-color: #EDEDED;
+    padding: 30px;
+    border-radius: 5%;
 }
 
 .checkbox{
@@ -16,7 +19,7 @@
 
 .checkbox:before{
     transition: all 0.3s ease-in-out;
-    border: 2px solid #f2f2f2;
+    border: 2px solid #FFAA01;
     z-index: 1;
     width: 2rem;
     height: 2rem;
@@ -27,7 +30,7 @@
 
 .checkbox:checked:before{
     transform: rotate(-45deg);
-    border-color: #009688;
+    border-color: #FFAA01;
     border-top-style: none;
     border-right-style: none;
     height: 1rem;
@@ -45,12 +48,13 @@
 
 #submit{
     margin-top: 10px;
-    border:2px solid #009688;
+    border:2px solid #FFAA01;
     border-radius: 5%;
     box-shadow: 0 3px 3px 0 #444;
     padding: 5px;
-    background-color: #009688;
+    background-color: #FFAA01;
     transition: all 0.2s ease-in-out;
+    font-size: 1.3rem;
 }
 
 #submit:hover{
@@ -59,5 +63,10 @@
 }
 
 .words{
-    font-size: 1.6em;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submitbtn{
+    text-align: center;
 }
