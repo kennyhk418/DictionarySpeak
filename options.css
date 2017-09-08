@@ -1,0 +1,63 @@
+.content{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+}
+
+.checkbox{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0 1rem 0 0 ;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.checkbox:before{
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #f2f2f2;
+    z-index: 1;
+    width: 2rem;
+    height: 2rem;
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.checkbox:checked:before{
+    transform: rotate(-45deg);
+    border-color: #009688;
+    border-top-style: none;
+    border-right-style: none;
+    height: 1rem;
+}
+
+.checkbox:after{
+    content:"";
+    position: absolute;
+    left:0;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+#submit{
+    margin-top: 10px;
+    border:2px solid #009688;
+    border-radius: 5%;
+    box-shadow: 0 3px 3px 0 #444;
+    padding: 5px;
+    background-color: #009688;
+    transition: all 0.2s ease-in-out;
+}
+
+#submit:hover{
+    box-shadow: 0 5px 5px 0 #444;
+    transform: scale(1.05);
+}
+
+.words{
+    font-size: 1.6em;
+}

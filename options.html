@@ -4,10 +4,13 @@
     <title>Options for speak or lookup</title>
     <script src="jquery-3.1.0.min.js"></script>
     <script src="options.js"></script>
+    <link rel="stylesheet" type="text/css" href="options.css"/>
 </head>
 <body>
-    <p><input type="checkbox" id="lookupword"/> Look up words</p>
-    <p><input type="checkbox" id="speakword"/> Speak words </p>
-    <input type="submit" id="submit" value="Submit Change"/>
+    <div class = "content">
+        <p><input type="checkbox" id="lookupword" class="checkbox"/> <span class="words">Look up words</span></p>
+        <p><input type="checkbox" id="speakword" class="checkbox"/> <span class="words">Speak words </span></p>
+        <input type="submit" id="submit" value="Submit Change"/>
+    </div>
 </body>
 </html>
