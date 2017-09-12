@@ -21,42 +21,53 @@ $(function(){
                 }
             }
 
-            // //This is how we retreve information from dictionary now
-            // $data = $(data);
-            // $data.find('entry').each(function(){
-            //     document.write($(this).find("hw").text()+"<br>");
-            //     $current_fl = $(this);
-            //     document.write($(this).find("fl:first").text() + "<br>");
-            //     $(this).find('dt').each(function(){
-            //         document.write($(this).text() + "<br><br>");
-            //     })
-            //     //console.log($(this).find("dt"));
-            // })
-            // console.log($data.find("suggestion"));
-            // $data.find('suggestion').each(function(){
-            //     document.write($(this).text() + "<br>");
-            // })
-
-            //This is how we retreve information from dictionary now
+            //Display words + meaning in collapse form (except the first one)
+            var count = 0;
             $data = $(data);
             $data.find('entry').each(function(){
-                //document.write($(this).find("hw").text()+"<br>");
+                //Append the list of words into the html
                 var string_to_append = "";
-                string_to_append += "<ol class=\"single_word\">";
-                string_to_append += $(this).find("hw").text() + "<br>";
-                string_to_append += $(this).find("fl:first").text()+"</li>";
+                string_to_append += "<ol class='single_word'>";
+                string_to_append += "<div id = '"+ count +"' style='cursor:pointer'>"
+                // Word name
+                var word_name = $(this).find("hw").text().replace("*","");
+                string_to_append += "<span class='word_name'>"
+                                + word_name.charAt(0).toUpperCase()
+                                +word_name.slice(1) + "</span>";
+                // Word type
+                string_to_append += "<span class='word_type'>\[" + $(this).find("fl:first").text() + "\]</span>";
+                string_to_append += "</div><div id = 'li_"+ count +"'>"
 
                 $(this).find('dt').each(function(){
-                    string_to_append += "<li>" + $(this).text()+"</li>";
+                    // Meaning list
+                    string_to_append += "<li>"
+                                    + $(this).text()+"</li>";
                 })
-                string_to_append += "</ol>"
+                string_to_append += "</ol></div>";
                 $(".content").append(string_to_append);
+
+                // It will always show the first word's meaning
+                if(count != 0){
+                    $("#li_"+count+" > li").css('display','none');
+                }
+                // Add listener to each word
+                $(document).on('click','#'+count, function(){
+                    //$("#li_"+$(this).attr('id')+" > li").css('color','red');
+                    $("#li_"+$(this).attr('id')+" > li").slideToggle('fast');
+                });
+                count++;
+
+
             })
 
             // If it cant find the word
             $data.find('suggestion').each(function(){
-                //document.write($(this).text() + "<br>");
+                string_to_append = "";
+                string_to_append += $(this).text() + "<br>"
+                $(".content").append(string_to_append);
             })
+
+
         },
         error: function(xhr, status){
             document.write(status);
