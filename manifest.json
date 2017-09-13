@@ -23,7 +23,8 @@
         "tabs",
         "tts",
         "storage",
-        "notifications"
+        "notifications",
+        "activeTab"
     ]
 
 }
