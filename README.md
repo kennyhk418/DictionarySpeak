@@ -13,3 +13,10 @@ Users have two ways to look up words. First, users can select a word, right clic
 ## Option Page:
 Right click on the extension button. Select "Options". A popup page will show up. Select whether you want to look up words on the context menu (the menu when you right click on a word). You can choose whether it pronounces the word and/or look up the word on Dictionary.com. Note that it does not make sense to uncheck both buttons. Therefore, both will be selected if none of them is selected.
 
+## Demo:
+1. Option Page:
+![OptionPage](https://i.imgur.com/8j9vqSz.gif)
+2. Lookup using right click:
+![LookUp](https://i.imgur.com/Gezabxk.gif)
+3. Lookup using extension button:
+![DictionarySpeak](https://i.imgur.com/BUTd4vt.gif) 
