@@ -1,3 +1,5 @@
+![DictionarySpeak](icons/48icon.png)
+
 # DictionarySpeak 
 This is a small Chrome Extension which allows users to:  
 1. Select a word from a webpage, and right click to pronounce/look up the word on Dictionary.com.
