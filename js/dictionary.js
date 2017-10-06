@@ -13,6 +13,7 @@ $(function(){
     chrome.tabs.executeScript({
         code: "window.getSelection().toString();"
     },function(selection){
+        console.log(document.getElementsByTagName('iframe')[0]);
         word_to_lookup = selection[0];
         if (word_to_lookup != ""){
             xml = make_url(word_to_lookup);
