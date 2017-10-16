@@ -19,7 +19,7 @@
 
 .checkbox:before{
     transition: all 0.3s ease-in-out;
-    border: 2px solid #FFAA01;
+    border: 2px solid #2acf06;
     z-index: 1;
     width: 2rem;
     height: 2rem;
@@ -30,7 +30,7 @@
 
 .checkbox:checked:before{
     transform: rotate(-45deg);
-    border-color: #FFAA01;
+    border-color: #2acf06;
     border-top-style: none;
     border-right-style: none;
     height: 1rem;
@@ -48,11 +48,11 @@
 
 #submit{
     margin-top: 10px;
-    border:2px solid #FFAA01;
+    border:2px solid #2acf06;
     border-radius: 5%;
     box-shadow: 0 3px 3px 0 #444;
     padding: 5px;
-    background-color: #FFAA01;
+    background-color: #2acf06;
     transition: all 0.2s ease-in-out;
     font-size: 1.3rem;
 }

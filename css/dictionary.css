@@ -1,13 +1,13 @@
 body{
     margin: 0px;
     width:250px;
-    background-color: #341D05;
+    background-color: #42563d;
 }
 
 .loader {
     margin: 85px;
-    border: 8px solid white; /* Light grey */
-    border-top: 8px solid #FF8300; /* Blue */
+    border: 8px solid white;
+    border-top: 8px solid #21a803;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -27,7 +27,7 @@ body{
     overflow: auto;
     background-color: white;
     font-family: 'Lato', sans-serif;
-    background-color: #E1E1E1;
+    background-color: #d0d0d0;
     animation-name: animationbottom;
     animation-duration: 1s;
 }
@@ -69,18 +69,18 @@ li{
 .content::-webkit-scrollbar {
   width: 12px;
   height: 9px;
-  background-color: #EACC91; /* or add it to the track */
+  background-color: white; /* or add it to the track */
 }
 /* Add a thumb */
 .content::-webkit-scrollbar-thumb {
-    background: orange;
+    background: #61ca47;
 }
 
 .word_name_container{
     border-radius: 5px;
     padding: 10px;
     cursor:pointer;
-    background-color: #FF8300;
+    background-color: #2acf06;
 }
 
 .word_name{
@@ -98,7 +98,7 @@ li{
 .word_not_found{
     font-size: 1.2rem;
     height:100%;
-    color: #FF8300;
+    color: #2acf06;
     font-weight: bold;
     background-color: white;
     padding:10px;
